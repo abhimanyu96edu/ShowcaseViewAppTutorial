@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(getApplicationContext(), Main2Activity.class));
-                //finish();
+                finish();
             }
         });
     }
@@ -102,10 +102,10 @@ public class MainActivity extends AppCompatActivity {
             //This creates the first showcase.
             scv = new ShowcaseView.Builder(this)
                     .setTarget(v1)
-                    .setContentTitle("Button 1")
-                    .setContentText("Sample Demo Button")
+                    .setContentTitle("Logout")
+                    .setContentText("Click here to Logout")
                     .build();
-            scv.setStyle(R.style.CustomShowcaseTheme3);
+            scv.setStyle(R.style.CustomShowcaseTheme1);
             scv.setButtonText("next");
 
 
@@ -120,32 +120,32 @@ public class MainActivity extends AppCompatActivity {
 
                         case 1:
                             scv.setTarget(v2);
-                            scv.setContentTitle("Button 2");
-                            scv.setStyle(R.style.CustomShowcaseTheme);
-                            scv.setContentText("Sample Demo Button");
+                            scv.setContentTitle("Add Data");
+                            scv.setStyle(R.style.CustomShowcaseTheme2);
+                            scv.setContentText("Click to Add Information");
                             scv.setButtonText("next");
                             break;
 
                         case 2:
                             scv.setTarget(v3);
-                            scv.setContentTitle("Button 3");
-                            scv.setStyle(R.style.CustomShowcaseTheme2);
-                            scv.setContentText("Sample Demo Button");
+                            scv.setContentTitle("Choose Template");
+                            scv.setStyle(R.style.CustomShowcaseTheme3);
+                            scv.setContentText("Click to choose template and create resume!");
                             scv.setButtonText("next");
                             break;
 
                         case 3:
                             scv.setTarget(v4);
-                            scv.setContentTitle("Button 4");
-                            scv.setStyle(R.style.CustomShowcaseTheme3);
-                            scv.setContentText("Sample Demo Button");
+                            scv.setContentTitle("Delete All Data");
+                            scv.setStyle(R.style.CustomShowcaseTheme4);
+                            scv.setContentText("Click TWICE to delete all data");
                             scv.setButtonText("finish");
 
                             break;
                         case 4:
-                            SharedPreferences.Editor tutorialShowcasesEdit = tutorialShowcases.edit();
-                            tutorialShowcasesEdit.putBoolean("run?", false);
-                            tutorialShowcasesEdit.apply();
+//                            SharedPreferences.Editor tutorialShowcasesEdit = tutorialShowcases.edit();
+//                            tutorialShowcasesEdit.putBoolean("run?", false);
+//                            tutorialShowcasesEdit.apply();
 
                             scv.hide();
                             break;

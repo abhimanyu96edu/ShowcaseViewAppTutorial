@@ -15,7 +15,8 @@ import com.github.amlcurran.showcaseview.targets.ViewTarget;
 
 public class Main2Activity extends AppCompatActivity {
 
-    Button button4;
+    Button button4, button5;
+    ShowcaseView sv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,21 +24,51 @@ public class Main2Activity extends AppCompatActivity {
         setContentView(R.layout.activity_main2);
 
         button4 = (Button) findViewById(R.id.b4);
+        button5 = (Button) findViewById(R.id.b5);
 
         Target target4 = new ViewTarget(R.id.b4, this);
 
-        new ShowcaseView.Builder(this)
+        sv = new ShowcaseView.Builder(this)
                 .setTarget(target4)
-                .setContentTitle("Button 4")
-                .setContentText("Tap here to goto resume folder")
+                .setContentTitle("Save and add more")
+                .setContentText("Click to save data and add more")
                 //.hideOnTouchOutside()//this will hide the tutorial on touch outsuide
                 .build();
+        sv.setStyle(R.style.CustomShowcaseTheme5);
+        sv.setButtonText("Next");
+
+        final Target target5 = new ViewTarget(R.id.b5, this);
 
         button4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                startActivity(new Intent(getApplicationContext(), MainActivity.class));
                 finish();
+            }
+        });
+
+        sv.overrideButtonClick(new View.OnClickListener() {
+            int count1 = 0;
+
+            @Override
+            public void onClick(View v) {
+                count1++;
+                switch (count1) {
+
+                    case 1:
+                        sv.setTarget(target5);
+                        sv.setContentTitle("Save and Exit");
+                        sv.setStyle(R.style.CustomShowcaseTheme6);
+                        sv.setContentText("Click to save data and exit");
+                        sv.setButtonText("Finish");
+                        break;
+
+                    case 2:
+
+                        sv.hide();
+                        break;
+
+                }
             }
         });
     }
