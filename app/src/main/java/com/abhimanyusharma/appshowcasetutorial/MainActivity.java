@@ -105,6 +105,7 @@ public class MainActivity extends AppCompatActivity {
                     .setContentTitle("Button 1")
                     .setContentText("Sample Demo Button")
                     .build();
+            scv.setStyle(R.style.CustomShowcaseTheme3);
             scv.setButtonText("next");
 
 
@@ -120,6 +121,7 @@ public class MainActivity extends AppCompatActivity {
                         case 1:
                             scv.setTarget(v2);
                             scv.setContentTitle("Button 2");
+                            scv.setStyle(R.style.CustomShowcaseTheme);
                             scv.setContentText("Sample Demo Button");
                             scv.setButtonText("next");
                             break;
@@ -127,7 +129,7 @@ public class MainActivity extends AppCompatActivity {
                         case 2:
                             scv.setTarget(v3);
                             scv.setContentTitle("Button 3");
-                            scv.setStyle(R.style.AppTheme);
+                            scv.setStyle(R.style.CustomShowcaseTheme2);
                             scv.setContentText("Sample Demo Button");
                             scv.setButtonText("next");
                             break;
@@ -135,6 +137,7 @@ public class MainActivity extends AppCompatActivity {
                         case 3:
                             scv.setTarget(v4);
                             scv.setContentTitle("Button 4");
+                            scv.setStyle(R.style.CustomShowcaseTheme3);
                             scv.setContentText("Sample Demo Button");
                             scv.setButtonText("finish");
 
