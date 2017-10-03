@@ -59,7 +59,7 @@ public class Main2Activity extends AppCompatActivity {
                         sv.setTarget(target5);
                         sv.setContentTitle("Save and Exit");
                         sv.setStyle(R.style.CustomShowcaseTheme6);
-                        sv.setContentText("Click to save data and exit");
+                        sv.setContentText("Click to save data and exit to main menu");
                         sv.setButtonText("Finish");
                         break;
 
