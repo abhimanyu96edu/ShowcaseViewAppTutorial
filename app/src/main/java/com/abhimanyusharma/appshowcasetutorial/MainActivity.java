@@ -127,6 +127,7 @@ public class MainActivity extends AppCompatActivity {
                         case 2:
                             scv.setTarget(v3);
                             scv.setContentTitle("Button 3");
+                            scv.setStyle(R.style.AppTheme);
                             scv.setContentText("Sample Demo Button");
                             scv.setButtonText("next");
                             break;
