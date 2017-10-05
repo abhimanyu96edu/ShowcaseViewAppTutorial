@@ -2,6 +2,7 @@ package com.abhimanyusharma.appshowcasetutorial;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -30,7 +31,16 @@ public class MainActivity extends AppCompatActivity {
         button3 = (Button) findViewById(R.id.b3);
         t1 = (TextView) findViewById(R.id.textView);
 
-        showcaseDialogTutorial();
+        //showcaseDialogTutorial();
+
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+
+                showcaseDialogTutorial();   //CALLING TUTORIAL FUNCTION
+
+            }
+        }, 1000);
 
 //        Target target1 = new ViewTarget(R.id.b1, this);
 //
@@ -105,7 +115,7 @@ public class MainActivity extends AppCompatActivity {
                     .setContentTitle("Logout")
                     .setContentText("Click here to Logout")
                     .build();
-            scv.setStyle(R.style.CustomShowcaseTheme1);
+            scv.setStyle(R.style.CustomShowcaseTheme4);
             scv.setButtonText("next");
 
 
@@ -164,3 +174,35 @@ public class MainActivity extends AppCompatActivity {
 //        .setStyle(R.style.CustomShowcaseTheme2)
 //        .build();
 //        ShowCase.setButtonText("next");
+
+/*
+*
+* <!--
+
+    Here's a correct table of percentages to hex values. E.g. for 50% white you'd use #80FFFFFF.
+
+    100% — FF
+    95% — F2
+    90% — E6
+    85% — D9
+    80% — CC
+    75% — BF
+    70% — B3
+    65% — A6
+    60% — 99
+    55% — 8C
+    50% — 80
+    45% — 73
+    40% — 66
+    35% — 59
+    30% — 4D
+    25% — 40
+    20% — 33
+    15% — 26
+    10% — 1A
+    5% — 0D
+    0% — 00
+
+     -->
+
+     */
